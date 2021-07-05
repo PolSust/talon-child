@@ -11,14 +11,14 @@ function theme_enqueue_scripts()
     wp_enqueue_script("slideshow", get_stylesheet_directory_uri() . "/js/slideshow.js", array("jquery"));
     wp_enqueue_script("gallery", get_stylesheet_directory_uri() . "/js/porfolioGallery.js", array("jquery"));
     wp_enqueue_script("scroll", get_stylesheet_directory_uri() . "/js/menuAutoScroll.js", array("jquery"));
-    wp_enqueue_script("mapsAPI", "https://maps.googleapis.com/maps/api/js?key=AIzaSyBr2XM7Q8HtzM_LRpvB-sVEP1ffaER4tS8");
+    wp_enqueue_script("mapsAPI", "https://maps.googleapis.com/maps/api/js?key=" . get_theme_mod("maps_api_key"));
     wp_enqueue_script("bx-slider", "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js");
 }
 add_action("wp_enqueue_scripts", "theme_enqueue_scripts");
 
 function talon_child_customize_register($wp_customize)
 {
-    // slider--------------------------------------------------------------
+    // slider--------------------------------------------------------------AIzaSyBr2XM7Q8HtzM_LRpvB-sVEP1ffaER4tS8
     $wp_customize->add_section('slider_settings', array(
         'title'      => __('Slideshow', 'talon_child'),
         'priority'   => 30,
@@ -45,6 +45,19 @@ function talon_child_customize_register($wp_customize)
         'priority'   => 30,
     ));
     //maps_active
+    $wp_customize->add_setting("maps_api_key", array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        "maps_api_key",
+        array(
+            'label'     => __('Your google maps API key:', 'talon_child'),
+            'type'      => 'input',
+            'section'   => 'maps_settings',
+            'settings'   => 'maps_api_key',
+        )
+    );
     $wp_customize->add_setting("maps_active", array(
         'default'   => '',
         'transport' => 'refresh',
@@ -52,7 +65,7 @@ function talon_child_customize_register($wp_customize)
     $wp_customize->add_control(
         "maps_active",
         array(
-            'label'     => __('Active', 'talon_child'),
+            'label'     => __('Display map', 'talon_child'),
             'type'      => 'checkbox',
             'section'   => 'maps_settings',
             'settings'   => 'maps_active',

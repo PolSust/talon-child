@@ -204,18 +204,15 @@ get_header(); ?>
 					<article id="reviews">
 						<div class="slider">
 							<div class="sliderComponent">
-								<div><img src="https://picsum.photos/id/237/100/100" alt=""></div>
-								<Q>It's a deep dive into a dark place, and a brilliantly rich experience.</Q>
+								<p><span class="dashicons dashicons-format-quote"></span>It's a deep dive into a dark place, and a brilliantly rich experience.<span class="dashicons dashicons-format-quote reverse"></span></p>
 								<h5 class="author">GAME INFORMER</h5>
 							</div>
 							<div class="sliderComponent">
-								<div><img src="https://picsum.photos/id/237/100/100" alt=""></div>
-								<Q>Truly a masterpiece of gaming if there ever was one, and certainly art worthy of being in a museum</Q>
+								<p><span class="dashicons dashicons-format-quote"></span>Truly a masterpiece of gaming if there ever was one, and certainly art worthy of being in a museum<span class="dashicons dashicons-format-quote reverse"></span></p>
 								<h5 class="author">DESTRUCTOID</h5>
 							</div>
 							<div class="sliderComponent">
-								<div><img src="https://picsum.photos/id/237/100/100" alt=""></div>
-								<Q>Best Platformer 2017 - The joy of Hollow Knight is the joy of discovery, always hard-earned, never handed to you.</Q>
+								<p><span class="dashicons dashicons-format-quote"></span>Best Platformer 2017 - The joy of Hollow Knight is the joy of discovery, always hard-earned, never handed to you.<span class="dashicons dashicons-format-quote reverse"></span></p>
 								<h5 class="author">PC GAMER</h5>
 							</div>
 						</div>

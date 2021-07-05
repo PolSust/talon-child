@@ -8,7 +8,9 @@ Template: talon
 *::after {
 	box-sizing: border-box;
 }
-
+.site {
+	overflow: hidden;
+}
 ul,
 li {
 	list-style: none;
@@ -68,7 +70,7 @@ li {
 	padding: 1em;
 	width: 100%;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.466);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .sliderComponent {
 	display: flex;
@@ -400,6 +402,9 @@ html {
 	border-bottom: 1px solid rgba(128, 128, 128, 0.493);
 }
 /* reviews */
+.bx-wrapper {
+	border: 0;
+}
 #reviews * {
 	color: white;
 }
@@ -410,22 +415,42 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: url("images/reviewsBG.png");
+	background-color: rgb(255, 255, 255);
+	padding: 5em 0;
 }
 #reviews img {
 	border-radius: 50%;
 	border: 5px solid #fff;
 }
+#reviews h5,
+#reviews p,
+#reviews span {
+	color: #000;
+}
 #reviews .sliderComponent * {
 	margin: 1em 0;
+}
+.bx-pager {
+	display: none;
+}
+#reviews .dashicons-format-quote {
+	margin: 0 1em;
+	font-size: 5rem;
+}
+.reverse {
+	transform: rotate(180deg);
 }
 /* footer sidebar */
 .footerSidebar {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	margin-top: 2em;
 	padding: 1em;
 	background-color: #21242e;
+}
+.footerSidebar * {
+	margin: 1em;
 }
 /* products */
 .productsContainer {
